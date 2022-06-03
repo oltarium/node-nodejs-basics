@@ -1,3 +1,7 @@
+import { createHash } from 'crypto';
+import { readFileSync } from 'fs';
+
 export const calculateHash = async () => {
-    // Write your code here 
+    const fileContent = readFileSync('./files/fileToCalculateHashFor.txt');
+    return createHash('sha256').update(fileContent).digest('hex');
 };

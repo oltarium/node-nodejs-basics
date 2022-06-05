@@ -5,3 +5,4 @@ export const parseArgs = () => {
         console.log(`${propName} is ${args[i + 1]}`);
     }
 };
+parseArgs();
